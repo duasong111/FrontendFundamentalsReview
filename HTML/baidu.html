@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度一下</title>
+    <style>
+        body{
+            margin: 12px;
+        }
+        .navigationBar {
+            display: flex;
+            justify-content: space-between
+        }
+        .navigationBar a {
+            margin: 4px;
+            color: #222222;
+            text-decoration: none;
+        }
+        /* 点击后颜色变化 */
+        .navigationBar a:hover {
+            color: rgb(57, 115, 190);
+        }
+        /* 对中部进行页面设置 */
+        .middleContain {
+            display: flex;
+            flex-direction: column; /* 上下排列 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中（需要容器有高度） */
+        }
+        .logo {
+            margin: 30px;
+            width: 360px; /* 示例宽度 */
+            height: 120px; /* 示例高度 */
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="navigationBar">
+        <div class="naviBarLeft">
+            <a href="">新闻</a>
+            <a href="">hao123</a>
+            <a href="">地图</a>
+            <a href="">贴吧</a>
+            <a href="">视频</a>
+            <a href="">图片</a>
+            <a href="">网盘</a>
+            <a href="">文库</a>
+            <a href="">更多</a>
+        </div>
+        <div class="naviBarRight">
+            <a href="">气温</a>
+            <a href="">设置</a>
+            <a href="">用户</a>
+        </div>
+    </div>
+
+    <div class="middleContain">
+        <div class="logo">
+            <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="">
+        </div>
+       <div class="searchBar"></div>
+    </div>
+
+</body>
+<footer>
+
+</footer>
+
+</html>

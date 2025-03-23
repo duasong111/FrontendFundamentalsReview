@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const max =  (...args) => Math.max(...args);
+        console.log("返回最大值:", max(1, 2, 3,5));
+        const max = (...args) => args.reduce((max, current) => Math.max(max, current), -Infinity);
+    </script>
+
+</body>
+
+</html>

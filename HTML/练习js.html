@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>加减乘除</title>
+</head>
+
+<body>
+	<form action="" id="chongzhi"><!--使用表单为了让重置按钮能清除所有值-->
+<input type="text" id="diyi"><!--运算的第一个值-->
+<select id="yunsuan"><!--这里是运算符号的选择-->
+    <option value="1">+</option>
+    <option value="2">-</option>
+    <option value="3">*</option>
+    <option value="4">/</option>
+</select>
+<input type="text" id="dier"><!--运算的第二个值-->
+<button type="button" id="btn">计算</button><!--计算按钮-->
+<input type="reset"><!--重置按钮-->
+<input type="text" id="box" disabled="disabled"><!--运算结果的值的显示位置;disabled为控件不能使用-->  
+		</form>
+
+<script>
+	function $(id){
+		return document.getElementById(id);
+	}//封装以id命名的标签使用$(id)的简单方法代替var ***=document.getElementById("***");
+	
+	/*点击计算按钮开始执行的函数*/
+	$("btn").onclick=function(){
+		/*警告不能为空*/
+		if($("diyi").value==="" || $("dier").value===""){
+			alert("请框内填写数字");
+		}
+		else{
+			/*给运算的值命名*/
+			var diyivalue=$("diyi").value;
+			var diervalue=$("dier").value;
+			
+			/*给运算的值由字符串转为浮点数（数字）*/
+			var nihao=parseFloat(diyivalue);//nihao:随便名的名字，建议使用有意义的字符
+			var nihao2=parseFloat(diervalue);
+			
+			/*使用switch判断运算符号的值后进行运算*/
+			var fuhao=$("yunsuan").value
+			console.log(fuhao)
+			switch(fuhao){
+				case"1":
+					$("box").value=nihao+nihao2
+					break;
+				case"2":
+					$("box").value=nihao-nihao2
+					break;
+				case"3":
+					$("box").value=nihao*nihao2
+					break;
+				case"4":
+					/*分母不能为0*/
+					if(nihao2===0){
+						alert("分母不能为0");
+						$("box").value=""
+						break;
+					}
+					$("box").value=nihao/nihao2
+					break;
+			}
+			/*最后输出的数值不是数字，说明肯定输错了，建议他重新输入并清除运算的值*/
+			var a=$("box").value
+			switch(a){
+					case"NaN":
+					alert("您输入的格式有误，请重新输入");
+					$("box").value=""
+					break;
+			}
+			
+		}
+		
+	}
+</script>
+</body>
+</html>

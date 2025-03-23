@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            
+            height: 200px;
+            width: 400px;
+            border-radius: 10px;
+        }
+        .box{
+            background-color: greenyellow;
+            border-top:2px salmon double ;
+        }
+
+        .active{
+            background-color: orangered;
+        }
+
+        .gradualChange{
+            background: linear-gradient(red, yellow, blue, orange);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+       
+    </div>
+
+
+    <script>
+        function timeDelay(delay){
+            setTimeout(()=>{
+                // div.className = ('active')
+                box.classList.remove('box')
+                console.log("修改执行完毕！");
+                
+            },delay)
+        }
+
+        const box = document.querySelector('.box')
+        timeDelay(3000);
+        
+        
+
+        
+        
+    </script>
+</body>
+</html>
