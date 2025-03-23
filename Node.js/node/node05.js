@@ -7,11 +7,11 @@
 // const doubleValue = obj.doubleValue(100);
 // console.log("最终的结果是:",doubleValue);
 
-//使用新的版本去进行自定义导出功能
-//需要注意的是去在package.json文件中去进行配置一下
+// 使用新的版本去进行自定义导出功能
+// 需要注意的是去在package.json文件中去进行配置一下
 
 
-//第二种引用
+// 第二种引用
 
 // import obj from './node05_export.js'
 // console.log(obj);
@@ -19,7 +19,7 @@
 // console.log("最终的结果:",result);
 
 // 第三种：直接导出函数名称的那种
-//***注意，一定添加文件后缀名.js */
+// ***注意，一定添加文件后缀名.js */
 // import { baseURL,getArraySum,getNumDouble } from "./node05_export.js";
 
 // console.log(baseURL);
@@ -31,6 +31,7 @@
 
 const obj = require('./utils')
 console.log("导入的内容是:",obj);
-console.log("测试输出:",obj.getArraySum([1,2,3,4,5]));
+console.log("测试输出:",obj.getArraySum([1,2]));
 
 
+// 使用 npm init -y 可以去导出package.json文件

@@ -1,5 +1,5 @@
 
-//该文件可自定义函数或别的数据类型，供外界导出使用
+// 该文件可自定义函数或别的数据类型，供外界导出使用
 
 // const baseURL = "http://localhost:8080/index.html"
 
@@ -10,7 +10,7 @@
 //  const getNumDouble = num => num * 2;
 
 
- //第一种 向外部进行暴露
+//  第一种 向外部进行暴露
 //  module.exports = {
 //     url:baseURL,
 //     arrSum:getArraySum,
@@ -18,7 +18,7 @@
 //  }
 
 // 第二种 使用ESCMAscript下的标准
-//即我们的Vue常见的标准
+// 即我们的Vue常见的标准
 // export default {
 //     url:baseURL,
 //     arrSum:getArraySum,

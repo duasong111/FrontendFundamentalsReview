@@ -1,4 +1,4 @@
-//写入node.js的文件
+//写入和读出node.js的文件
 
 const fs = require('fs');
 // fs.writeFile('./test.txt', "hello,node.js", { encoding: 'utf8' }, (error) => {
