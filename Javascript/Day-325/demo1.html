@@ -1,0 +1,29 @@
+<!-- //第五章 -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"> </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div{
+        padding: 10px;
+        margin: 0 auto;
+        border: 0.5px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      const data = new Date()
+      const divValue = document.querySelector('div');
+      // function divDay(){
+      //   const data = new Date();
+      //   return  `今天的时间是:${data}`
+      // }
+      // divValue.innerHTML = divDay()
+      divValue.innerHTML = data.toLocaleDateString()
+    </script>
+  </body>
+</html>

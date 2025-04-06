@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log(!0),console.log(!1)})();
+(()=>{"use strict";console.log(!0),console.log(!1),document.querySelector(".btn-login").addEventListener("click",(()=>{const e=document.querySelector('.login-form [name="username"]').value,o=document.querySelector('.login-form [name="password"]').value;return function(e){return 11===e.length&&/^\d+$/.test(e)}(e)?function(e){return 6===e.length&&/^\d+$/.test(e)}(o)?void console.log("数据发送到服务器"):(console.log("验证码必须是6位数字"),void alertFn("验证码必须是6位数字",!1)):(console.log("手机号必须是11位数字"),void alertFn("手机号必须是11位数字",!1))}))})();
